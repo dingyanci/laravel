@@ -1,23 +1,16 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: 丁延赐
- * Date: 2019/4/15
- * Time: 20:50
- */
-?>
-        <!DOCTYPE html>
-<html>
+ <!doctype html>
+<html lang="en">
 <head>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta charset="utf-8">
-    <title>用户注册页面</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页面</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <form action="mail" class="form-horizontal" role="form"  method="post">
     <div class="form-group">
         <label for="firstname" class="col-sm-2 control-label">名字</label>
