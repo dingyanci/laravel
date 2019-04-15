@@ -16,7 +16,7 @@ class MailController extends Controller
      * 发送邮件
      */
     public function mail(Request $request){
-       $mail=Request::input('mail');
+       $mail=$request->input('mail');
 //        $mail=$_POST['mail'];
         print_r($mail);die;
         //测试数据

@@ -71,6 +71,9 @@
       <path value="$PROJECT_DIR$/blog/package.json" />
     </packageJsonPaths>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="172" />
     <option name="y" value="57" />
