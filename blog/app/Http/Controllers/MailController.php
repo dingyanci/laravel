@@ -8,17 +8,15 @@ class MailController extends Controller
 {
     private $mailer;
 
-//    public function __construct(Mailer $mailer)
-//    {
-//        $this->mailer = $mailer;
-//    }
+    public function __construct(Mailer $mailer)
+    {
+        $this->mailer = $mailer;
+    }
     /**
      * 发送邮件
      */
     public function mail(Request $request){
        $mail=$request->input('mail');
-//        $mail=$_POST['mail'];
-        print_r($mail);die;
         //测试数据
         $viewData = ['title' => '你若盛开，清风自来','author' => '木心'];
         $emailData = [
