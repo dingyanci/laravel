@@ -36,7 +36,7 @@
     <div class="form-group">
         <label for="lastname" class="col-sm-2 control-label">邮箱</label>
         <div class="col-sm-10">
-            <input type="password" class="form-control" name="mail" id="lastname"
+            <input type="text" class="form-control" name="mail" id="lastname"
                    placeholder="请输入邮箱">
         </div>
     </div>
