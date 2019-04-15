@@ -14,5 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+//邮件发送
 Route::any('mail','MailController@mail');
+Route::any('login','MailController@login');

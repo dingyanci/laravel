@@ -37,4 +37,8 @@ class MailController extends Controller
                 });
         return $tag;
     }
+    //注册
+    public function login(){
+        return view('login');
+    }
 }
