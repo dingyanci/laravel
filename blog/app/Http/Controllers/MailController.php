@@ -17,6 +17,7 @@ class MailController extends Controller
      */
     public function mail(Request $request){
         $data=$request->all();
+        print_r($data);die;
         $mail=$data['mail'];
         //测试数据
         $viewData = ['title' => '你若盛开，清风自来','author' => '木心'];
