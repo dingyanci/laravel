@@ -16,9 +16,10 @@ class MailController extends Controller
      * 发送邮件
      */
     public function mail(Request $request){
-        $data=$request->all();
-        print_r($request);die;
-        $mail=$data['mail'];
+        //$data=$request->all();
+       // print_r($request);die;
+        $mail=$_POST['mail'];
+        print_r($mail);die;
         //测试数据
         $viewData = ['title' => '你若盛开，清风自来','author' => '木心'];
         $emailData = [
