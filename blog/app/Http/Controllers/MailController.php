@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer;
-
+use App\Jobs\Queue;
 class MailController extends Controller
 {
     private $mailer;
@@ -29,6 +29,9 @@ class MailController extends Controller
         //TODO  $tag 判断发送是否成功，进行后续代码开发
         return view('mail',['title' => '你若盛开，清风自来','author' => '木心']);
     }
+
+
+
 	public function sendText($emailData){
         //此处为文本内容
         $tag = $this->mailer
@@ -37,6 +40,10 @@ class MailController extends Controller
                     $message->subject($emailData['subject']);
                     $message->to($emailData['addr']);
                 });
+        $arr=array(
+            'time'=>time()
+        );
+        $this->dispatch(new Queue($arr));
         return $tag;
     }
     //注册
