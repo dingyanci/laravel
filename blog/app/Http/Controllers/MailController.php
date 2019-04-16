@@ -4,10 +4,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer;
 use App\Jobs\Queue;
-require_once __DIR__ . '/usr/rabbitmq/vendor/autoload.php';
-//require_once '../vendor/autoload.php';
-use PhpAmqpLib\Connection\AMQPStreamConnection;
-use PhpAmqpLib\Message\AMQPMessage;
 class MailController extends Controller
 {
     private $mailer;
