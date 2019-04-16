@@ -20,54 +20,35 @@ class MailController extends Controller
      * 发送邮件
      */
     public function mail(Request $request){
-       $mail=$request->input('mail');
-        $connection = new AMQPStreamConnection('47.106.252.220', 5672, 'laoding', '123456','ceshi');
-        $channel = $connection->channel();
-
-        $channel->exchange_declare('topic_logs', 'topic', false, false, false);
-
-        $routing_key = isset($argv[1]) && !empty($argv[1]) ? $argv[1] : 'anonymous.info';
-        $data = implode(' ', array_slice($argv, 2));
-        if (empty($data)) {
-            $data = "Hellow word!";
-        }
-
-        $msg = new AMQPMessage($data);
-
-        $channel->basic_publish($msg, 'topic_logs', $routing_key);
-
-        echo ' [x] Sent ', $routing_key, ':', $data, "\n";
-
-        $channel->close();
-        $connection->close();
-//        //测试数据
-//        $viewData = ['title' => '你若盛开，清风自来','author' => '木心'];
-//        $emailData = [
-//            'content' => '从前的日色变得慢 车 马 邮件 都慢',
-//            'subject' => '这是邮件主题，希望您能支持！',//邮件主题
-//            'addr' => "$mail",//邮件接收地址
-//        ];
-//        $this->sendText($emailData);
-//        //$this->sendHtml('mail',$viewData,$emailData);
-//        //TODO  $tag 判断发送是否成功，进行后续代码开发
-//        return view('mail',['title' => '你若盛开，清风自来','author' => '木心']);
+        $mail=$request->input('mail');
+        //测试数据
+        $viewData = ['title' => '你若盛开，清风自来','author' => '木心'];
+        $emailData = [
+            'content' => '从前的日色变得慢 车 马 邮件 都慢',
+            'subject' => '这是邮件主题，希望您能支持！',//邮件主题
+            'addr' => "$mail",//邮件接收地址
+        ];
+        $this->sendText($emailData);
+        //$this->sendHtml('mail',$viewData,$emailData);
+        //TODO  $tag 判断发送是否成功，进行后续代码开发
+        return view('mail',['title' => '你若盛开，清风自来','author' => '木心']);
     }
 
 
 
 	public function sendText($emailData){
         //此处为文本内容
-//        $tag = $this->mailer
-//            ->raw($emailData['content'],
-//                function ($message)use ($emailData){
-//                    $message->subject($emailData['subject']);
-//                    $message->to($emailData['addr']);
-//                });
-//        $arr=array(
-//            'time'=>time()
-//        );
-//        $this->dispatch(new Queue($arr));
-//        return $tag;
+        $tag = $this->mailer
+            ->raw($emailData['content'],
+                function ($message)use ($emailData){
+                    $message->subject($emailData['subject']);
+                    $message->to($emailData['addr']);
+                });
+        $arr=array(
+            'time'=>time()
+        );
+        $this->dispatch(new Queue($arr));
+        return $tag;
     }
     //注册
     public function login(){
