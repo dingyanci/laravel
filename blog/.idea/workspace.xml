@@ -26,8 +26,8 @@
       <file leaf-file-name="MailController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-25">
-              <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+            <state relative-caret-position="175">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
               <folding>
                 <element signature="e#39#67#0#PHP" expanded="true" />
                 <element signature="e#217#264#0#PHP" expanded="true" />
@@ -184,6 +184,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\PhpStudy\PHPTutorial\WWW\laravel\blog\app\Http\Controllers" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -207,12 +212,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555335419604</updated>
       <workItem from="1555335420965" duration="1887000" />
-      <workItem from="1555385441149" duration="3700000" />
+      <workItem from="1555385441149" duration="3992000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5587000" />
+    <option name="totallyTimeSpent" value="5879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="99" width="1480" height="782" extended-state="0" />
@@ -364,8 +369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        <state relative-caret-position="175">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding>
             <element signature="e#39#67#0#PHP" expanded="true" />
             <element signature="e#217#264#0#PHP" expanded="true" />

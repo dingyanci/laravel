@@ -29,7 +29,7 @@ class MailController extends Controller
         $routing_key = isset($argv[1]) && !empty($argv[1]) ? $argv[1] : 'anonymous.info';
         $data = implode(' ', array_slice($argv, 2));
         if (empty($data)) {
-            $data = "$mail";
+            $data = "Hellow word!";
         }
 
         $msg = new AMQPMessage($data);
@@ -57,17 +57,17 @@ class MailController extends Controller
 
 	public function sendText($emailData){
         //此处为文本内容
-        $tag = $this->mailer
-            ->raw($emailData['content'],
-                function ($message)use ($emailData){
-                    $message->subject($emailData['subject']);
-                    $message->to($emailData['addr']);
-                });
-        $arr=array(
-            'time'=>time()
-        );
-        $this->dispatch(new Queue($arr));
-        return $tag;
+//        $tag = $this->mailer
+//            ->raw($emailData['content'],
+//                function ($message)use ($emailData){
+//                    $message->subject($emailData['subject']);
+//                    $message->to($emailData['addr']);
+//                });
+//        $arr=array(
+//            'time'=>time()
+//        );
+//        $this->dispatch(new Queue($arr));
+//        return $tag;
     }
     //注册
     public function login(){
